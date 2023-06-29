@@ -132,6 +132,92 @@ ef means embed file
 
 steghide extract -sf regular_image.jpeg
 
+	 curl -H "Accept: application/json" -H "Accept-Language: en-US" 
+  -H "Cache-Control: max-age=3600" https://api.example.com
+
+buffer overflow 
+function frames stacks
+Stack Frame:
+Each function call creates a stack frame, which contains information such as the
+ function's return address, parameters, local variables, and other bookkeeping data.
+return addresses of program 
+
+->non executeable stack
+->Address Space Layout Randomization (ASLR)
+->canaries using(value placed just before return of control address,checks the present and predetermined value,if not same we can check or stop a 
+rop  attack
+
+-----------
+strings:;
+For each file given, GNU strings prints the printable character sequences that are
+ at least 4 characters long (or the number given with the options below) and are followed by an unprintable
+ character.
+
+
+locate wordlist
+
+->zip2john secret_files.zip > hash.txt
+
+->john hash.txt
+
+
+
+zip -e myzip.zip trash1.txt trash2.txt                
+Enter password: 
+Verify password: 
+  adding: trash1.txt (stored 0%)
+  adding: trash2.txt (stored 0%)
+                                 
+
+
+->zip2john myzip.zip > myzip.hashes
+
+
+->john myzip.hashes
+
+
+----------------------
+ast
+The ast module in Python provides a way to work with abstract syntax trees (ASTs).
+ It allows you to parse Python source code into an AST, analyze the structure of the code
+
+, and perform various operations on it.
+
+
+
+->The eval() function in Python is a built-in function that evaluates a given expression 
+as a Python expression and returns the res
+
+
+->The all() function in Python is a built-in function that returns True if all elements
+ in an iterable are true (or if the iterable is empty), and False otherwise
+
+
+->compile() function is used to compile source code into a code object or an AST
+ (Abstract Syntax Tree) object. The compile() function takes three main arguments:
+ source, filename, and mode
+
+->exec() function is a built-in function used to execute dynamically created Python 
+code or statements. It allows you to run Python code stored in strings or code objects
+
+->Dynamic import, also known as dynamic module loading or runtime module loading, is
+ a feature in some programming languages that allows modules or libraries to be loaded 
+and imported at runtime, rather than statically at compile-time or startup.
+
+
+->__import__('os'): This dynamically imports the os module using the __import__() function.
+ The __import__() function is a low-level function in Python that allows you to import modules
+ by providing the module name as a string.
+
+<--,__import__('os').system('cat flag.txt')-->
+
+
+myTuple = ("John", "Peter", "Vicky")
+
+x = "#".join(myTuple)
+
+print(x)
+
 
 </pre>
 </body>
