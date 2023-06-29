@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>
+title
+</title></head>
+<body>
+  what i got from various sites
+<pre>
+  Analytics stores campaign source information. 
+Each time the value of the campaign is updated, Analytics opens a new session
+Generally speaking, the campaign updates anytime the user arrives at your site via a search engine, referring website
+google client id:
+In order for Google Analytics to determine which traffic belongs to which user, a unique identifier associated with
+ each user is sent with each hit. This identifier can be a single, first-party cookie named _ga that stores a Google
+ Analytics client ID
+->he analytics.js library accomplishes this via the Client ID field, a unique, randomly generated string 
+that gets stored in the browsers cookies, so subsequent visits to the same site can be associated with the same user.
+->Other cookies created by analytics.js include _gid, AMP_TOKEN and _gac_<property-id>. These cookies
+ store other randomly generated ids and campaign information about the user.
+->Every time a hit is sent to Google Analytics, the cookie expiration time is updated to be the current
+ time plus the value of the cookieExpires field
+-> A web session ID is unique to a specific visit, while a cookie is unique to a specific visitor 
+and thus (developers hope) remains the same through multiple web sessions. By mapping a single cookie 
+ID to multiple session IDs, developers and analysts can get a clearer picture of how visitors interact 
+with their web applications.
+
+
+
+->A session creates a file in a temporary directory on the server where registered session variables 
+and their values are stored. This data will be available to all pages on the site during that visit.
+
+The location of the temporary file is determined by a setting in the php.ini file called session.save_path
+. Before using any session variable make sure you have setup this path.
+
+
+
+When a PHP script wants to retrieve the value from a session variable, PHP automatically gets the unique s
+ession identifier string from the PHPSESSID cookie and then looks in its temporary directory for the file
+ bearing that name and a validation can be done by comparing both value
+
+simple counter
+
+  session_start();
+   
+   if( isset( $_SESSION['counter'] ) ) {
+      $_SESSION['counter'] += 1;
+   }else {
+      $_SESSION['counter'] = 1;
+   }
+	
+   $msg = "You have visited this page ".  $_SESSION['counter'];
+
+unset($_SESSION['counter']);
+session_destroy();
+
+
+->You don't need to call start_session() function to start a session when a user visits your site
+ if you can set session.auto_start variable to 1 in php.ini file.
+
+
+->Cookies are usually set in an HTTP header
+
+->
+HTTP/1.1 200 OK
+Date: Fri, 04 Feb 2000 21:03:38 GMT
+Server: Apache/1.3.9 (UNIX) PHP/4.0b3
+Set-Cookie: name=xyz; expires=Friday, 04-Feb-07 22:03:38 GMT; 
+                 path=/; domain=tutorialspoint.com
+Connection: close
+Content-Type: text/html
+
+
+
+type coersions in php ==
+$array = [1, 2, 3];
+
+if ($array == 1) {
+    echo 'Equal';\
+
+
+->$var = '';
+
+if ($var == null) {
+    echo 'Equal';
+
+
+->$var1 = [];
+$var2 = null;
+
+if ($var1 == $var2) {
+    echo 'Equal';
+
+
+$var1 = '';
+$var2 = null;
+
+if ($var1 == $var2) {
+    echo 'Equal';
+
+
+->$var1 = 's';
+$var2 = true;
+
+if ($var1 == $var2) {
+    echo 'Equal'
+
+
+-----------------------
+$username=[];
+$flag='hgfdghjk';
+$password=[];
+
+            if (strcmp($username, $flag)==0 && strcmp($password, $flag)==0)
+                echo "in if";
+            else
+                echo "Invalid username or password";
+        }
+
+
+
+-------------------------------------------------------------------
+exif tool
+->can get thubmbail of images with flag -b
+exiftool -artist=me a.jpg
+
+
+-------------------------
+steghide
+steghide embed -cf regular_image.jpeg -ef super_secret_stuff.txt
+cf means cover file
+ef means embed file
+
+steghide extract -sf regular_image.jpeg
+
+
+</pre>
+</body>
+</html>
