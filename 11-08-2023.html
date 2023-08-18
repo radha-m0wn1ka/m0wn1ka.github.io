@@ -1,0 +1,55 @@
+cast sig "functon_name()" :gives selector
+cast --calldata-decode "function_with_params(params)" sig
+----------------------------
+ forge install foundry-rs/forge-std --no-commit
+forge script script/DeployFundMe.s.sol -- rpc-url $rpc_urll --private-key $private_key --broadcast
+========================
+after cloning we need to run forge build so that missing dependencies will be installed
+===============================
+indexed parameters are searchable
+events ,reverts,requires,custom errors
+chain link vrf:verifiable random funciton :docs.chain.link/vrf/v2/introduction
+===============================================
+radha@DESKTOP-E4J3HG3:~/solidity/dapp/backend$ npx hardhat run --network sepolia scripts/deploy.js
+Contract deployed: BaseContract {
+  target: '0x15498805f106268439B1D747b4B57620155Bb0DE',
+  interface: Interface {
+    fragments: [
+      [ConstructorFragment],
+      [FunctionFragment],
+      [FunctionFragment],
+      [FunctionFragment]
+    ],
+    deploy: ConstructorFragment {
+      type: 'constructor',
+      inputs: [],
+      payable: false,
+      gas: null
+    },
+    fallback: null,
+    receive: false
+  },
+  runner: HardhatEthersSigner {
+    _gasLimit: undefined,
+    address: '0x3b6259Acc80AC29459a29DAE22B3D0D918C2c752',
+    provider: HardhatEthersProvider {
+      _hardhatProvider: [LazyInitializationProviderAdapter],
+      _networkName: 'sepolia',
+      _blockListeners: [],
+      _transactionHashListeners: Map(0) {},
+      _eventListeners: [],
+      _isHardhatNetworkCached: false,
+      _transactionHashPollingInterval: undefined
+    }
+  },
+  filters: {},
+  fallback: null,
+  [Symbol(_ethersInternal_contract)]: {}
+}
+cotract address 0x15498805f106268439B1D747b4B57620155Bb0DE
+radha@DESKTOP-E4J3HG3:~/solidity/dapp/backend$ 
+=======================https://docs.ethers.org/v6/getting-started/
+===============================
+https://medium.com/coinmonks/build-a-simple-and-unstoppable-decentralized-web-application-dapp-aa8d08e35f9c
+https://www.moesif.com/blog/blockchain/ethereum/Tutorial-for-building-Ethereum-Dapp-with-Integrated-Error-Monitoring/
+https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
